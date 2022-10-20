@@ -1,7 +1,6 @@
 <h1>Git</h1> 
 
-Git es un sistema de control de versiones. El control de versiones, también conocido como "control de código fuente", es la práctica de rastrear y gestionar los cambios en el código de software.
-Realiza un seguimiento de todas las modificaciones en el código en un tipo especial de base de datos. Si se comete un error, los desarrolladores pueden ir hacia atrás en el tiempo y comparar las versiones anteriores del código para ayudar a resolver el error, al tiempo que se minimizan las interrupciones para todos los miembros del equipo.
+Git es un sistema de control de versiones. El control de versiones, también conocido como "control de código fuente", es la práctica de rastrear y gestionar los cambios en el código de software. Realiza un seguimiento de todas las modificaciones en el código en un tipo especial de base de datos. Si se comete un error, los desarrolladores pueden ir hacia atrás en el tiempo y comparar las versiones anteriores del código para ayudar a resolver el error, al tiempo que se minimizan las interrupciones para todos los miembros del equipo.
 
 <h2>Funcionamiento</h2>
 <h3>Inicialización del repositorio central</h3>
@@ -48,5 +47,9 @@ El comando git branch te permite crear, enumerar y eliminar ramas, así como cam
  
 <h3>Git Hooks</h3>
 
-Los Git Hooks son scripts que se ejecutan automáticamente cada vez que ocurre un evento en particular en un repositorio de Git. Permiten personalizar el comportamiento interno de Git y desencadenar acciones personalizables en puntos clave del ciclo de vida del desarrollo.
+<p>Los Git Hooks son scripts que se ejecutan automáticamente cada vez que ocurre un evento en particular en un repositorio de Git. Permiten personalizar el comportamiento interno de Git y desencadenar acciones personalizables en puntos clave del ciclo de vida del desarrollo.</p>
+<p>Los ganchos de Git son scripts de shell que se ejecutan automáticamente antes o después de que Git ejecute un comando importante como Commit o Push. Para que un Hook funcione, es necesario otorgarle al sistema Unix los permisos de ejecución. Mediante el uso de estos scripts, podemos automatizar ciertas cosas.</p>
+<p>Para activar un hook, solo es necesario crear un archivo y guardarlo en la carpeta .git/hooks/. Sin embargo, el nombre del archivo estará predefinido por Git. Algunos de los ganchos que podemos usar son:</p>
+
+<table><tbody><tr><td><strong>Git Hook</strong></td><td><strong>Comando Git</strong></td><td><strong>Descripción</strong></td></tr><tr><td>applypatch-msg.sample</td><td>git am</td><td>Cuando se cambia un mensaje de patch</td></tr><tr><td>commit-msg.sample</td><td>git commit</td><td>Para configurar el mensaje de una acción de confirmación</td></tr><tr><td>fsmonitor-watchman.sample</td><td>launch watchman</td><td>Para integrar watchman</td></tr><tr><td>post-update.sample</td><td>git push</td><td>Para actualizar todos los datos después del push</td></tr><tr><td>pre-applypatch.sample</td><td>git am</td><td>Antes de aplicar un patch</td></tr><tr><td>pre-commit.sample</td><td>git commit</td><td>Antes de hacer commit</td></tr><tr><td>prepare-commit-msg.sample</td><td>git commit</td><td>Cuando se establece un mensaje de confirmación</td></tr><tr><td>pre-push.sample</td><td>git push</td><td>Antes de hacer un push</td></tr><tr><td>pre-rebase.sample</td><td>git rebase</td><td>Antes de hacer un pase o fusionar</td></tr><tr><td>pre-receive.sample</td><td>git push</td><td>Cuando presionamos y obtenemos los datos del repositorio remoto</td></tr><tr><td>update.sample</td><td>git push</td><td>Para actualizar los datos remotos en un push</td></tr></tbody></table>
 
