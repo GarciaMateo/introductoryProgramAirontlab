@@ -19,6 +19,7 @@ En primer lugar, hace falta crear el repositorio central en un servidor. Si se t
 <li> git status: muestra el estado del directorio de trabajo y del área del entorno de ensayo. Permite ver los cambios que se han preparado, los que no y los archivos en los que Git no va a realizar el seguimiento.</li>
 <li> git add: agrega un cambio en el directorio de trabajo al área de ensayo. Le dice a Git que desea incluir actualizaciones de un archivo en particular en la próxima confirmación.</li>
 <li> git commit: captura una instantánea de los cambios preparados en ese momento del proyecto.</li>
+<li> git stash: almacena temporalmente (o guarda en un stash) los cambios que hayas efectuado en el código en el que estás trabajando para que puedas trabajar en otra cosa y, más tarde, regresar y volver a aplicar los cambios más tarde. Guardar los cambios en stashes resulta práctico si tienes que cambiar rápidamente de contexto y ponerte con otra cosa, pero estás en medio de un cambio en el código y no lo tienes todo listo para confirmar los cambios</li>
 </ul>
 
 <h3>Sincronización de Git</h3> 
@@ -44,3 +45,8 @@ El comando git branch te permite crear, enumerar y eliminar ramas, así como cam
 <li> git checkout -b ＜new-branch＞: creará la nueva rama y cambiará a ella al instante.</li>
 <li> git checkout -b ＜new-branch＞ ＜existing-branch＞: se añade ＜existing-branch＞, que basa new-branch en existing-branch y no en el HEAD actual.</li>
 </ul>
+ 
+<h3>Git Hooks</h3>
+
+Los Git Hooks son scripts que se ejecutan automáticamente cada vez que ocurre un evento en particular en un repositorio de Git. Permiten personalizar el comportamiento interno de Git y desencadenar acciones personalizables en puntos clave del ciclo de vida del desarrollo.
+
