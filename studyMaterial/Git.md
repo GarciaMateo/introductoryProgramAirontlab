@@ -1,55 +1,9 @@
-<h1>Git</h1> 
+<h1>Git</h1>
+I collected information from the following pages to be able to put all together in a handbook available at the following link.
+https://docs.google.com/document/d/1g5jNzYFXdexSu8_Rt1ZO3YprsuanUsMMO9Y5QSvo6Bg/edit#heading=h.s5yo8x2j92cn
 
-Git es un sistema de control de versiones. El control de versiones, también conocido como "control de código fuente", es la práctica de rastrear y gestionar los cambios en el código de software. Realiza un seguimiento de todas las modificaciones en el código en un tipo especial de base de datos. Si se comete un error, los desarrolladores pueden ir hacia atrás en el tiempo y comparar las versiones anteriores del código para ayudar a resolver el error, al tiempo que se minimizan las interrupciones para todos los miembros del equipo.
-
-<h2>Funcionamiento</h2>
-<h3>Inicialización del repositorio central</h3>
-En primer lugar, hace falta crear el repositorio central en un servidor. Si se trata de un proyecto nuevo, puedes inicializar un repositorio vacío. Si no es así, tendrás que importar un repositorio Git existente.
-
-<h3>Configuración de un repositorio</h3>
-<ul>
-<li>git clone:se utiliza principalmente para apuntar a un repositorio existente y clonar o copiar dicho repositorio en un nuevo directorio, en otra ubicación.</li>
-<li> git init: crea un nuevo repositorio de Git. Se crea un subdirectorio de .git en el directorio de trabajo actual, que contiene todos los metadatos de Git necesarios para el nuevo repositorio.</li>
-<li>git init --bare < directory >:Inicializa un repositorio de Git vacío, pero omite el directorio de trabajo. Los repositorios compartidos deberían crearse siempre con la marca --bare.</li>
-</ul>
-
-<h3>Aplicación de cambios y confirmaciones</h3> 
-<ul>
-<li> git status: muestra el estado del directorio de trabajo y del área del entorno de ensayo. Permite ver los cambios que se han preparado, los que no y los archivos en los que Git no va a realizar el seguimiento.</li>
-<li> git add: agrega un cambio en el directorio de trabajo al área de ensayo. Le dice a Git que desea incluir actualizaciones de un archivo en particular en la próxima confirmación.</li>
-<li> git commit: captura una instantánea de los cambios preparados en ese momento del proyecto.</li>
-<li> git stash: almacena temporalmente (o guarda en un stash) los cambios que hayas efectuado en el código en el que estás trabajando para que puedas trabajar en otra cosa y, más tarde, regresar y volver a aplicar los cambios más tarde. Guardar los cambios en stashes resulta práctico si tienes que cambiar rápidamente de contexto y ponerte con otra cosa, pero estás en medio de un cambio en el código y no lo tienes todo listo para confirmar los cambios</li>
-</ul>
-
-<h3>Sincronización de Git</h3> 
-<ul>
-<li> git remote: te permite crear, ver y eliminar conexiones con otros repositorios. </li>
-<li> git fetch: descarga commits, archivos y referencias de un repositorio remoto a tu repositorio local. Esta acción la llevas a cabo cuando quieres ver en qué han estado trabajando los demás.</li>
-<li>git push: se usa para cargar contenido del repositorio local a un repositorio remoto.Es el equivalente a git fetch, pero mientras que al recuperar se importan las confirmaciones a ramas locales, al enviar estas se exportan a ramas remotas.</li>
-<li>git pull: se emplea para extraer y descargar contenido desde un repositorio remoto y actualizar al instante el repositorio local para reflejar ese contenido.</li>
-</ul>
-
-<h3>Uso de ramas</h3> 
-
-El comando git branch te permite crear, enumerar y eliminar ramas, así como cambiar su nombre. No te permite cambiar entre ramas o volver a unir un historial bifurcado. Por este motivo, git branch está estrechamente integrado con los comandos git checkout y git merge.
-<ul>
-<li>git branch:Enumera todas las ramas de tu repositorio. Es similar a git branch --list.</li>
-<li>git branch <branch>:Crea una nueva rama llamada ＜branch＞. Este comando no extrae la nueva rama.</li>
-<li> git branch -d <branch>:Elimina la rama especificada. Esta es una operación segura, ya que Git evita que elimines la rama si tiene cambios que aún no se han fusionado.</li>
-<li> git branch -D <branch>:Fuerza la eliminación de la rama especificada, incluso si tiene cambios sin fusionar.</li>
-<li> git branch -m <branch>:Cambia el nombre de la rama actual a ＜branch＞.</li>
-<li> git branch -a: Enumera todas las ramas remotas.</li>
-<li> git merge: Permite tomar las líneas independientes de desarrollo creadas por git branch e integrarlas en una sola rama.</li>
-<li>git checkout: te permite desplazarte entre las ramas creadas por git branch.</li>
-<li> git checkout -b ＜new-branch＞: creará la nueva rama y cambiará a ella al instante.</li>
-<li> git checkout -b ＜new-branch＞ ＜existing-branch＞: se añade ＜existing-branch＞, que basa new-branch en existing-branch y no en el HEAD actual.</li>
-</ul>
- 
-<h3>Git Hooks</h3>
-
-<p>Los Git Hooks son scripts que se ejecutan automáticamente cada vez que ocurre un evento en particular en un repositorio de Git. Permiten personalizar el comportamiento interno de Git y desencadenar acciones personalizables en puntos clave del ciclo de vida del desarrollo.</p>
-<p>Los ganchos de Git son scripts de shell que se ejecutan automáticamente antes o después de que Git ejecute un comando importante como Commit o Push. Para que un Hook funcione, es necesario otorgarle al sistema Unix los permisos de ejecución. Mediante el uso de estos scripts, podemos automatizar ciertas cosas.</p>
-<p>Para activar un hook, solo es necesario crear un archivo y guardarlo en la carpeta .git/hooks/. Sin embargo, el nombre del archivo estará predefinido por Git. Algunos de los ganchos que podemos usar son:</p>
-
-<table><tbody><tr><td><strong>Git Hook</strong></td><td><strong>Comando Git</strong></td><td><strong>Descripción</strong></td></tr><tr><td>applypatch-msg.sample</td><td>git am</td><td>Cuando se cambia un mensaje de patch</td></tr><tr><td>commit-msg.sample</td><td>git commit</td><td>Para configurar el mensaje de una acción de confirmación</td></tr><tr><td>fsmonitor-watchman.sample</td><td>launch watchman</td><td>Para integrar watchman</td></tr><tr><td>post-update.sample</td><td>git push</td><td>Para actualizar todos los datos después del push</td></tr><tr><td>pre-applypatch.sample</td><td>git am</td><td>Antes de aplicar un patch</td></tr><tr><td>pre-commit.sample</td><td>git commit</td><td>Antes de hacer commit</td></tr><tr><td>prepare-commit-msg.sample</td><td>git commit</td><td>Cuando se establece un mensaje de confirmación</td></tr><tr><td>pre-push.sample</td><td>git push</td><td>Antes de hacer un push</td></tr><tr><td>pre-rebase.sample</td><td>git rebase</td><td>Antes de hacer un pase o fusionar</td></tr><tr><td>pre-receive.sample</td><td>git push</td><td>Cuando presionamos y obtenemos los datos del repositorio remoto</td></tr><tr><td>update.sample</td><td>git push</td><td>Para actualizar los datos remotos en un push</td></tr></tbody></table>
-
+<h3>Reference</h3>
+<ol>
+<li>https://www.hostinger.com.ar/tutoriales/como-usar-git-hooks</li>
+<li>https://www.atlassian.com/es/git/tutorials/</li>
+</ol>
