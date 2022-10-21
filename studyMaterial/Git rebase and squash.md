@@ -1,5 +1,4 @@
-<h1>Git</h1>
-<h2>Rebase vs Merge</h3>
+<h1>Git - Rebase vs Merge</h1>
 I collected information from the following pages to be able to put all together in a handbook available at the following link.
 https://docs.google.com/document/d/1g5jNzYFXdexSu8_Rt1ZO3YprsuanUsMMO9Y5QSvo6Bg/edit#heading=h.s5yo8x2j92cn
 
