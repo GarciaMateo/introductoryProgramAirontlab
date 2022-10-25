@@ -15,3 +15,16 @@ https://docs.google.com/document/d/1g5jNzYFXdexSu8_Rt1ZO3YprsuanUsMMO9Y5QSvo6Bg/
 <ol>
 <li>https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics </li>
 </ol>
+
+<h3>SEO Reference</h3>
+<ol>
+<li>https://moz.com/learn/seo/what-is-seo</li>
+</ol>
+
+
+<h3>DOM Reference</h3>
+<ol>
+<li>https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction </li>
+<li>https://www.w3.org/TR/DOM-Level-3-Core/introduction.html </li>
+<li>https://www.w3schools.com/js/js_htmldom.asp </li>
+</ol>
