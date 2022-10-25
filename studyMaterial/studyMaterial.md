@@ -1,6 +1,6 @@
 <h1>Handbook</h1>
 
-I collected information from the following pages in order to be able to create a handbook available at the following link.
+I collected information from the many pages in order to be able to create a handbook available at the following link.
 https://docs.google.com/document/d/1g5jNzYFXdexSu8_Rt1ZO3YprsuanUsMMO9Y5QSvo6Bg/edit#heading=h.s5yo8x2j92cn
 
 <h3>Git Reference</h3>
