@@ -28,3 +28,16 @@ https://docs.google.com/document/d/1g5jNzYFXdexSu8_Rt1ZO3YprsuanUsMMO9Y5QSvo6Bg/
 <li>https://www.w3.org/TR/DOM-Level-3-Core/introduction.html </li>
 <li>https://www.w3schools.com/js/js_htmldom.asp </li>
 </ol>
+
+<h3>HTML Reference</h3>
+<ol>
+<li>https://www.w3schools.com/html/html_intro.asp </li>
+</ol>
+
+<h3>CSS Reference</h3>
+<ol>
+<li>https://www.w3schools.com/html/html_css.asp </li>
+<li>https://developer.mozilla.org/en-US/docs/Learn/CSS </li>
+<li>https://www.w3schools.com/css/default.asp </li>
+</ol>
+
